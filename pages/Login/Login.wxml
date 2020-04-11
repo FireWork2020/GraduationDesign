@@ -1,0 +1,15 @@
+<div class="helloImg">
+  <image src="../../Img/helloImg.jpeg"></image>
+</div>
+<div class="login">
+  <div class="password-login">
+    <form > 
+      <input class="input" placeholder="账号"></input>
+      <input class="input" password="true" placeholder="密码"></input>
+      <button bindtap="passwordLogin">登录</button>
+    </form>
+  </div>
+  <div class="wechat-login">
+    <button bindtap="login">微信登录</button>
+  </div>
+</div>

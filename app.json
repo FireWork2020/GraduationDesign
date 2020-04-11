@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/Login/Login",
+    "pages/Home/Home",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/My/My",
+    "pages/Store/Store"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "list": [
+      {
+        "text": "社区",
+        "pagePath": "pages/Home/Home",
+        "iconPath": "",
+        "selectIconPath": ""
+      },
+      {
+        "text": "积分商城",
+        "pagePath": "pages/Store/Store",
+        "iconPath": "",
+        "selectIconPath": ""
+      },
+      {
+        "text": "我的",
+        "pagePath": "pages/My/My",
+        "iconPath": "",
+        "selectIconPath": ""
+      }
+    ]
+  }
+}

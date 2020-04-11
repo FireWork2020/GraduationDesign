@@ -1,0 +1,31 @@
+<div class="image-container"></div>
+<div class="classification">
+  <div class="item-container">
+    <div class="item"> 
+      <icon></icon>
+      <text>回收记录</text>
+    </div>
+    <div class="item"> 
+      <icon></icon>
+      <text>回收记录</text>
+    </div>
+    <div class="item"> 
+      <icon></icon>
+      <text>回收记录</text>
+    </div>
+  </div>
+  <div class="item-container">
+    <div class="item"> 
+      <icon></icon>
+      <text>回收记录</text>
+    </div>
+    <div class="item"> 
+      <icon></icon>
+      <text>回收记录</text>
+    </div>
+    <div class="item"> 
+      <icon></icon>
+      <text>回收记录</text>
+    </div>
+  </div>
+</div>

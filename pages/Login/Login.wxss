@@ -1,0 +1,7 @@
+.helloImg{
+  width: 100%;
+  height:40rpx;
+}
+.login .password-login .input{
+  margin-left: 40rpx;
+}
