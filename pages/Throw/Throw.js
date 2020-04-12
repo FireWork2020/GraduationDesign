@@ -1,4 +1,4 @@
-// pages/Store/Store.js
+// pages/Throw/Throw.js
 Page({
 
   /**

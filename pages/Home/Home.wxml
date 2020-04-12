@@ -2,30 +2,31 @@
 <div class="classification">
   <div class="item-container">
     <div class="item"> 
-      <icon></icon>
+      <image src="../../Img/Icon/1.png"></image>
+      <div class="next-line"></div>
       <text>回收记录</text>
     </div>
     <div class="item"> 
-      <icon></icon>
-      <text>回收记录</text>
+      <image src="../../Img/Icon/2.png"></image>
+      <text>积分记录</text>
     </div>
     <div class="item"> 
-      <icon></icon>
-      <text>回收记录</text>
+      <image src="../../Img/Icon/3.png"></image>
+      <text>帮助中心</text>
     </div>
   </div>
   <div class="item-container">
     <div class="item"> 
-      <icon></icon>
-      <text>回收记录</text>
+      <image src="../../Img/Icon/4.png"></image>
+      <text>美丽庭院</text>
     </div>
     <div class="item"> 
-      <icon></icon>
-      <text>回收记录</text>
+      <image src="../../Img/Icon/5.png"></image>
+      <text>公告</text>
     </div>
     <div class="item"> 
-      <icon></icon>
-      <text>回收记录</text>
+      <image src="../../Img/Icon/6.png"></image>
+      <text>志愿者服务</text>
     </div>
   </div>
 </div>

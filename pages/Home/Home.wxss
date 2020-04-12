@@ -1,1 +1,23 @@
-/* pages/Home/Home.wxss */
+.classification{
+  width:100%;
+}
+.item-container{
+  width:100%;
+  display: flex;
+}
+.item{
+  width:33%;
+  text-align: center;
+}
+.item image{
+  width:60%;
+  height:70rpx;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+.next-line{
+  width:100%;
+}
+.item text{
+  text-align: center;
+}
