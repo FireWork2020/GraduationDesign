@@ -5,9 +5,59 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    kinds:[
+      "选择垃圾种类",
+      "有害垃圾",
+      "可回收垃圾",
+      "厨余垃圾"
+    ],
+    index: 0,
+    collectCode:0,
+    imgPath:''
   },
-
+  submit:function(e){
+    wx.uploadFile({
+      url: 'http://localhost:8080/upload/uploadMission',
+      filePath: imgPath,
+      name: 'file',
+      formData:{
+        user:'',
+        collectionCode:this.collectCode,
+        kind:this.index
+      }
+    })
+  },
+  uploadImg:function(e){
+    wx.chooseImage({
+      success: function(res) {
+        console.log(res);
+        console.log(res.tempFilePaths);
+        this.setData({
+          imgPath:res.tempFilePath[0]
+        })
+      },
+      fail:function(res){
+        console.log(res);
+      }
+    })
+  },
+  selectChange:function(e){
+    console.log(e);
+    this.setData({
+      index:e.detail.value
+    })
+    wx.request({
+      url: 'http://localhost:8080/get/getCollectCode',
+      data:{
+        index:this.index
+      },
+      success(res){
+        this.setData({
+          collectCode:res.collectCode
+        })
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

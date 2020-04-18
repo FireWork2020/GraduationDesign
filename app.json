@@ -5,7 +5,13 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/My/My",
-    "pages/Throw/Throw"
+    "pages/Throw/Throw",
+    "pages/CollectHistory/CollectHistory",
+    "pages/HelpCenter/HelpCenter",
+    "pages/IntegrateHistory/IntegrateHistory",
+    "pages/Notice/Notice",
+    "pages/Volunteer/Volunteer",
+    "pages/SmartHouse/SmartHouse"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -1,32 +1,44 @@
-<div class="image-container"></div>
+<div class="image-container">
+  <swiper indicator-dots="true" indicator-color="red" indicator-active-color="yellow" autoplay="true">
+    <swiper-item class="swiper-item">
+      <image src="../../Img/swiper/swiper1.jpeg"></image>
+    </swiper-item>
+  <swiper-item class="swiper-item">
+      <image src="../../Img/swiper/swiper2.jpg"></image>
+    </swiper-item>
+    <swiper-item class="swiper-item">
+      <image src="../../Img/swiper/swiper3.jpg"></image>
+    </swiper-item>
+  </swiper>
+</div>
 <div class="classification">
   <div class="item-container">
     <div class="item"> 
       <image src="../../Img/Icon/1.png"></image>
       <div class="next-line"></div>
-      <text>回收记录</text>
+      <text bindtap="collectHistory">回收记录</text>
     </div>
     <div class="item"> 
       <image src="../../Img/Icon/2.png"></image>
-      <text>积分记录</text>
+      <text bindtap="integrateHistory">积分记录</text>
     </div>
     <div class="item"> 
       <image src="../../Img/Icon/3.png"></image>
-      <text>帮助中心</text>
+      <text bindtap="helpCenter">帮助中心</text>
     </div>
   </div>
   <div class="item-container">
     <div class="item"> 
       <image src="../../Img/Icon/4.png"></image>
-      <text>美丽庭院</text>
+      <text bindtap="smartHouse">美丽庭院</text>
     </div>
     <div class="item"> 
       <image src="../../Img/Icon/5.png"></image>
-      <text>公告</text>
+      <text bindtap="notice">公告</text>
     </div>
     <div class="item"> 
       <image src="../../Img/Icon/6.png"></image>
-      <text>志愿者服务</text>
+      <text bindtap="volunteerService">志愿者服务</text>
     </div>
   </div>
 </div>

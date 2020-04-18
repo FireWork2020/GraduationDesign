@@ -1,2 +1,24 @@
-<!--pages/Throw/Throw.wxml-->
-<text>pages/Throw/Throw.wxml</text>
+<div class="bigContainer">
+    <div class="container">
+  <text class="guide">选择分类 -> 提交验证 -> 提交任务</text>
+</div>
+<div class="container">
+  <picker bindchange="selectChange"  value="{{index}}" range="{{kinds}}">
+    <view>
+      选择分类:{{kinds[index]}}
+    </view>
+  </picker>
+</div>
+<div class="container">
+  <text>请求回收码: </text>
+  <text>{{collectCode}}</text>
+</div>
+<div class="container">
+  <button bindtap="uploadImg">提交凭证</button>
+</div>
+<div class="container">
+  <form>
+    <button bindtap="submit">提交</button>
+  </form>
+</div>
+</div>

@@ -10,6 +10,6 @@
     </form>
   </div>
   <div class="wechat-login">
-    <button bindtap="login">微信登录</button>
+    <button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">微信登录</button>
   </div>
 </div>

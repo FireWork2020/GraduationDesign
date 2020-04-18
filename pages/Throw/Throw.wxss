@@ -1,1 +1,12 @@
-/* pages/Throw/Throw.wxss */
+.bigContainer{
+  height: 1078rpx;
+}
+.container{
+  text-align:center;
+  margin:10px;
+  padding: 10rpx 10rpx;
+}
+.guide{
+  text-align: center;
+  background-color: greenyellow;
+}

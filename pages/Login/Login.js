@@ -1,4 +1,5 @@
 // pages/Login/Login.js
+const app = getApp()
 Page({
 
   /**
@@ -6,6 +7,12 @@ Page({
    */
   data: {
 
+  },
+  bindGetUserInfo:function(e){
+    app.globalData.userInfo = e.detail.userInfo;
+    wx.switchTab({
+      url: '/pages/Home/Home'
+    })
   },
   login: function (){
     wx.login({

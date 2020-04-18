@@ -1,24 +1,27 @@
-// pages/My/My.js
-const app = getApp();
+// pages/CollectHistory/CollectHistory.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    userInfo:null
+    collectHistory:null,
   },
 
-  bindViewTap:function(e){
-
-  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(app.globalData.userInfo);
-    this.setData({
-      userInfo:app.globalData.userInfo
+    wx.request({
+      url: 'http://localhost:8080/get/collectHistory',
+      data: {
+        userInfo: userInfo.nickName
+      },
+      success(res) {
+        this.setData({
+          collectHistory: res
+        })
+      }
     })
   },
 
