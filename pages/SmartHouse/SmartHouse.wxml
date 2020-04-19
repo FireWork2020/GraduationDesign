@@ -1,2 +1,20 @@
-<!--pages/SmartHouse/SmartHouse.wxml-->
-<text>pages/SmartHouse/SmartHouse.wxml</text>
+<div class="container">
+<div class="sum">
+  <text class="top-left">小区：在水一方</text>
+  <text class="top-right">日期:{{date}}</text>
+</div>
+<div class="title">
+  <text class="title1">排名</text>
+  <text class="title2">家庭</text>
+  <text class="title3">积分</text>
+</div>
+<div class="item-container">
+  <view wx:for="{{smartHouses}}">
+    <view class="item">
+      <view class="title1">{{item.no}}</view>
+      <view class="title2">{{item.family}}</view>
+      <view class="title3">{{item.socre}}</view>
+    </view>
+  </view>
+</div>
+</div>

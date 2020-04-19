@@ -1,1 +1,7 @@
 /* pages/IntegrateHistory/IntegrateHistory.wxss */
+.sum{
+  border: 1px;
+}
+.top-right{
+  text-align: right;
+}

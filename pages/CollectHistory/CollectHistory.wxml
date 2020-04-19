@@ -1,0 +1,18 @@
+<div>
+<div class="sum">
+  <text>年月：{{date}}</text>
+</div>
+<div class="item-container">
+  <view wx:for="{{collectHistory}}">
+    <view class="item">
+      <view class="left">
+        <text class="info">分类:{{item.classification}}</text>
+        <text class="info">日期:{{item.date}}</text>
+      </view>
+      <view class="right">
+        <text class="info">备注:{{item.remark}}</text>
+      </view>
+    </view>
+  </view>
+</div>
+</div>

@@ -1,17 +1,34 @@
 // pages/CollectHistory/CollectHistory.js
+var util = require('../../utils/util.js');
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    collectHistory:null,
+    date:null,
+    collectHistory:[
+      {
+        classification:'分类',
+        date:'2020-04-02',
+        remart:'无'
+      },
+      {
+        classification: '分类',
+        date: '2020-04-02',
+        remart: '无'
+      }
+    ]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var time = util.formatTime(new Date());
+    this.setData({
+      date:time
+    })
     wx.request({
       url: 'http://localhost:8080/get/collectHistory',
       data: {

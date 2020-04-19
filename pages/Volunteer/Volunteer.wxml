@@ -1,0 +1,19 @@
+<div>
+<div class="sum">
+  <text>年月：{{date}}</text>
+</div>
+<div class="item-container">
+  <view wx:for="{{volunteerService}}">
+    <view class="item">
+      <view class="left">
+        <text class="info">名称:{{item.name}}</text>
+        <text class="info">日期:{{item.date}}</text>
+      </view>
+      <view class="right">
+        <text class="info">备注:{{item.remark}}</text>
+        <button class="info" bindtap="apply" data-index="{{index}}">我要报名</button>
+      </view>
+    </view>
+  </view>
+</div>
+</div>

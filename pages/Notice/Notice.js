@@ -5,7 +5,17 @@ Page({
    * 页面的初始数据
    */
   data: {
-    notice:null
+    notice:[
+      {
+        content:'第一个'
+      },
+      {
+        content:'第二个'
+      }
+    ]
+  },
+  noticeDetail:function(options){
+    console.log(options.currentTarget.dataset.index);
   },
 
   /**

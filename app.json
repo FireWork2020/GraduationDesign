@@ -11,7 +11,8 @@
     "pages/IntegrateHistory/IntegrateHistory",
     "pages/Notice/Notice",
     "pages/Volunteer/Volunteer",
-    "pages/SmartHouse/SmartHouse"
+    "pages/SmartHouse/SmartHouse",
+    "pages/Admin/Admin"
   ],
   "window": {
     "backgroundTextStyle": "light",

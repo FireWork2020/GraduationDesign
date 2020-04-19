@@ -1,1 +1,14 @@
-/* pages/Notice/Notice.wxss */
+.container{
+  width:100%;
+  padding:0%;
+}
+.sum{
+  width: 100%;
+}
+.top-left{
+  width: 50%;
+}
+.top-right{
+  width: 50%;
+  text-align: right;
+}

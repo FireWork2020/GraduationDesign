@@ -1,2 +1,13 @@
-<!--pages/Notice/Notice.wxml-->
-<text>pages/Notice/Notice.wxml</text>
+<div class="container">
+<div class="sum">
+  <text class="top-left">小区：在水一方</text>
+  <text class="top-right">日期:{{date}}</text>
+</div>
+<div class="item-container">
+  <view wx:for="{{notice}}">
+    <view class="item" bindtap="noticeDetail" data-index="{{index}}">
+      <view class="title1">{{item.content}}</view>
+    </view>
+  </view>
+</div>
+</div>

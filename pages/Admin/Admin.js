@@ -1,46 +1,18 @@
-// pages/IntegrateHistory/IntegrateHistory.js
-var util = require('../../utils/util.js');
+// pages/Admin/Admin.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    date: null,
-    totalScore:404,
-    integrateHistory: [
-      {
-        classification: '分类',
-        date: '2020-04-02',
-        remart: '无'
-      },
-      {
-        classification: '分类',
-        date: '2020-04-02',
-        remart: '无'
-      }
-    ]
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var time = util.formatTime(new Date());
-    this.setData({
-      date: time
-    })
-    wx.request({
-      url: 'http://localhost:8080/get/integrateHistory',
-      data: {
-        userInfo: userInfo.nickName
-      },
-      success(res) {
-        this.setData({
-          integrateHistory: res
-        })
-      }
-    })
+
   },
 
   /**

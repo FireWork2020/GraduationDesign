@@ -5,9 +5,18 @@ Page({
    * 页面的初始数据
    */
   data: {
-    volunteerService:null
+    volunteerService:[
+      {
+        name:'捡垃圾',
+        date:'2020-04-02',
+        remark:'无'
+      }
+    ]
   },
 
+  apply:function(options){
+
+  },
   /**
    * 生命周期函数--监听页面加载
    */
