@@ -1,5 +1,5 @@
 <div class="helloImg">
-  <image src="../../Img/helloImg.jpeg"></image>
+  <image src="../../Img/helloImg.jpeg" bindtap="navToAdmin"></image>
 </div>
 <div class="login">
   <div class="password-login">

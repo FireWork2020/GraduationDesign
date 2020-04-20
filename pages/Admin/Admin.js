@@ -1,18 +1,55 @@
-// pages/Admin/Admin.js
+// pages/Home/Home.js
+const app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    collectHistory: null,
+    integrateHistory: null,
+    smartHouses: null,
+    notice: null,
+    volunteerService: null
   },
 
+  collectHistory: function (e) {
+    wx.navigateTo({
+      url: '/pages/AdminCollectHistory/AdminCollectHistory',
+    })
+  },
+  adminPeople: function (e) {
+    wx.navigateTo({
+      url: '/pages/AdminPeople/AdminPeople',
+    })
+  },
+  helpCenter: function (e) {
+    wx.navigateTo({
+      url: '/pages/AdminHelpCenter/AdminHelpCenter',
+    })
+  },
+  smartHouse: function (e) {
+    wx.navigateTo({
+      url: '/pages/AdminSmartHouse/AdminSmartHouse'
+    })
+  },
+  notice: function (e) {
+    wx.navigateTo({
+      url: '/pages/AdminNotice/AdminNotice'
+    })
+  },
+  volunteerService: function (e) {
+    wx.navigateTo({
+      url: '/pages/AdminVolunteer/AdminVolunteer'
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setData({
+      userInfo: app.globalData.userInfo
+    })
   },
 
   /**

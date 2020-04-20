@@ -1,4 +1,5 @@
 // pages/Throw/Throw.js
+const app = getApp();
 Page({
 
   /**
@@ -15,17 +16,40 @@ Page({
     collectCode:0,
     imgPath:''
   },
-  submit:function(e){
-    wx.uploadFile({
-      url: 'http://localhost:8080/upload/uploadMission',
-      filePath: imgPath,
-      name: 'file',
-      formData:{
-        user:'',
-        collectionCode:this.collectCode,
-        kind:this.index
+  getCode:function(e){
+    wx.request({
+      url: 'http://localhost:8080/get/getCode',
+      data:{
+        kind:index
+      },
+      success(res){
+        this.setData({
+          collectCode:res
+        })
       }
     })
+  },
+  submit:function(e){
+    wx.request({
+      url: 'http://localhost:8080/submit/submitTask',
+      data:{
+        userName:app.globalData.userInfo.userName,
+        type:index
+      },
+      success(res){
+        console.log(res);
+      }
+    })
+    // wx.uploadFile({
+    //   url: 'http://localhost:8080/upload/uploadMission',
+    //   filePath: imgPath,
+    //   name: 'file',
+    //   formData:{
+    //     user:'',
+    //     collectionCode:this.collectCode,
+    //     kind:this.index
+    //   }
+    // })
   },
   uploadImg:function(e){
     wx.chooseImage({

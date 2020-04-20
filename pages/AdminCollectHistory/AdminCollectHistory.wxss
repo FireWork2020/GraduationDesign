@@ -1,0 +1,19 @@
+/* pages/CollectHistory/CollectHistory.wxss */
+.sum{
+  border: 1px;
+}
+.item{
+  width: 100%;
+  display: flex;
+}
+.left{
+  width:50%;
+  display:flex;
+  flex-direction: column;
+}
+.right{
+  width: 50%;
+}
+.item{
+  width: 100%;
+}

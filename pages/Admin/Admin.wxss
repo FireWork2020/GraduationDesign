@@ -1,1 +1,34 @@
-/* pages/Admin/Admin.wxss */
+.image-container{
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+.classification{
+  width:100%;
+  margin-top: 20rpx;
+}
+.item-container{
+  width:100%;
+  display: flex;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+.item{
+  width:33%;
+  text-align: center;
+}
+.item image{
+  width:50%;
+  height:70rpx;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+.next-line{
+  width:100%;
+}
+.item text{
+  text-align: center;
+}
+.swiper-item{
+  height:30rpx;
+  width:100%;
+}

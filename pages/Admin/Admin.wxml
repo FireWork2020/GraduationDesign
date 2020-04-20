@@ -1,2 +1,44 @@
-<!--pages/Admin/Admin.wxml-->
-<text>pages/Admin/Admin.wxml</text>
+<div class="image-container">
+  <swiper indicator-dots="true" indicator-color="red" indicator-active-color="yellow" autoplay="true">
+    <swiper-item class="swiper-item">
+      <image src="../../Img/swiper/swiper1.jpeg"></image>
+    </swiper-item>
+  <swiper-item class="swiper-item">
+      <image src="../../Img/swiper/swiper2.jpg"></image>
+    </swiper-item>
+    <swiper-item class="swiper-item">
+      <image src="../../Img/swiper/swiper3.jpg"></image>
+    </swiper-item>
+  </swiper>
+</div>
+<div class="classification">
+  <div class="item-container">
+    <div class="item"> 
+      <image src="../../Img/Icon/1.png"></image>
+      <div class="next-line"></div>
+      <text bindtap="collectHistory">回收记录</text>
+    </div> 
+    <div class="item"> 
+      <image src="../../Img/Icon/2.png"></image>
+      <text bindtap="adminPeople">人员查看</text>
+    </div>
+    <div class="item"> 
+      <image src="../../Img/Icon/3.png"></image>
+      <text bindtap="helpCenter">问题解答</text>
+    </div>
+  </div>
+  <div class="item-container">
+    <div class="item"> 
+      <image src="../../Img/Icon/4.png"></image>
+      <text bindtap="smartHouse">家庭评优</text>
+    </div>
+    <div class="item"> 
+      <image src="../../Img/Icon/5.png"></image>
+      <text bindtap="notice">发布公告</text>
+    </div>
+    <div class="item"> 
+      <image src="../../Img/Icon/6.png"></image>
+      <text bindtap="volunteerService">志愿者服务</text>
+    </div>
+  </div>
+</div>

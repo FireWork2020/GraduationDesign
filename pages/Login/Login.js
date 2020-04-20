@@ -8,6 +8,11 @@ Page({
   data: {
 
   },
+  navToAdmin:function(){
+    wx.navigateTo({
+      url: '/pages/Admin/Admin',
+    })
+  },
   bindGetUserInfo:function(e){
     app.globalData.userInfo = e.detail.userInfo;
     wx.switchTab({

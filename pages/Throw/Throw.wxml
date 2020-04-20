@@ -3,14 +3,14 @@
   <text class="guide">选择分类 -> 提交验证 -> 提交任务</text>
 </div>
 <div class="container">
-  <picker bindchange="selectChange"  value="{{index}}" range="{{kinds}}">
+  <picker bindchange="selectChange"  value="{{index}}" range="{{kinds}}" >
     <view>
       选择分类:{{kinds[index]}}
     </view>
   </picker>
 </div>
 <div class="container">
-  <text>请求回收码: </text>
+  <button bindtap="getCode">获取请求码：</button>
   <text>{{collectCode}}</text>
 </div>
 <div class="container">

@@ -12,7 +12,12 @@
     "pages/Notice/Notice",
     "pages/Volunteer/Volunteer",
     "pages/SmartHouse/SmartHouse",
-    "pages/Admin/Admin"
+    "pages/Admin/Admin",
+    "pages/AdminCollectHistory/AdminCollectHistory",
+    "pages/AdminSmartHouse/AdminSmartHouse",
+    "pages/AdminNotice/AdminNotice",
+    "pages/AdminVolunteer/AdminVolunteer",
+    "pages/AdminPeople/AdminPeople"
   ],
   "window": {
     "backgroundTextStyle": "light",
