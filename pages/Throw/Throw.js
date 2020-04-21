@@ -17,14 +17,13 @@ Page({
     imgPath:''
   },
   getCode:function(e){
+    var that = this;
     wx.request({
-      url: 'http://localhost:8080/get/getCode',
-      data:{
-        kind:index
-      },
+      url: 'http://127.0.0.1:8080/get/getCode',
       success(res){
-        this.setData({
-          collectCode:res
+        console.log(res);
+        that.setData({
+          collectCode:res.data
         })
       }
     })
@@ -34,7 +33,8 @@ Page({
       url: 'http://localhost:8080/submit/submitTask',
       data:{
         userName:app.globalData.userInfo.userName,
-        type:index
+        type:index,
+        collectCode:collectCode
       },
       success(res){
         console.log(res);
