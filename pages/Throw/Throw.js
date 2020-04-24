@@ -14,7 +14,8 @@ Page({
     ],
     index: 0,
     collectCode:0,
-    imgPath:''
+    imgPath:'',
+    userInfo:null
   },
   getCode:function(e){
     var that = this;
@@ -29,12 +30,15 @@ Page({
     })
   },
   submit:function(e){
+    console.log(this.data.index);
+    console.log(this.data.userInfo.nickName);
+    console.log(this.data.collectCode);
     wx.request({
       url: 'http://localhost:8080/submit/submitTask',
       data:{
-        userName:app.globalData.userInfo.userName,
-        type:index,
-        collectCode:collectCode
+        userName:this.data.userInfo.nickName,
+        type:this.data.index,
+        collectCode:this.data.collectCode
       },
       success(res){
         console.log(res);
@@ -52,16 +56,9 @@ Page({
     // })
   },
   uploadImg:function(e){
-    wx.chooseImage({
-      success: function(res) {
-        console.log(res);
-        console.log(res.tempFilePaths);
-        this.setData({
-          imgPath:res.tempFilePath[0]
-        })
-      },
-      fail:function(res){
-        console.log(res);
+    wx.scanCode({
+      success(res){
+        console.log(res)
       }
     })
   },
@@ -86,7 +83,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setData({
+      userInfo:app.globalData.userInfo
+    })
   },
 
   /**
