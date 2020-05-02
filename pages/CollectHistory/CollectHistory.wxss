@@ -1,19 +1,25 @@
 /* pages/CollectHistory/CollectHistory.wxss */
 .sum{
   border: 1px;
+  background-color: rgb(167, 163, 163);
 }
 .item{
   width: 100%;
   display: flex;
+  background-color: rgb(201, 198, 198);
+  margin-top: 15rpx;
 }
 .left{
   width:50%;
   display:flex;
   flex-direction: column;
+  background-color: rgb(224, 221, 221);
+  margin-left: 10rpx;
+  padding-left: 10rpx;
 }
 .right{
   width: 50%;
-}
-.item{
-  width: 100%;
+  background-color: rgb(224, 221, 221);
+  margin-left: 10rpx;
+  padding-left: 10rpx;
 }

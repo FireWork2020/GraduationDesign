@@ -7,10 +7,10 @@ Page({
    */
   data: {
     kinds:[
-      "选择垃圾种类",
+      "可回收物",
+      "厨余垃圾",
       "有害垃圾",
-      "可回收垃圾",
-      "厨余垃圾"
+      "其它垃圾"
     ],
     index: 0,
     collectCode:0,
@@ -19,12 +19,11 @@ Page({
   },
   getCode:function(e){
     var that = this;
-    wx.request({
-      url: 'http://127.0.0.1:8080/get/getCode',
-      success(res){
-        console.log(res);
+    wx.scanCode({
+      success(res) {
+        console.log(res)
         that.setData({
-          collectCode:res.data
+          collectCode: res.result
         })
       }
     })
@@ -42,23 +41,6 @@ Page({
       },
       success(res){
         console.log(res);
-      }
-    })
-    // wx.uploadFile({
-    //   url: 'http://localhost:8080/upload/uploadMission',
-    //   filePath: imgPath,
-    //   name: 'file',
-    //   formData:{
-    //     user:'',
-    //     collectionCode:this.collectCode,
-    //     kind:this.index
-    //   }
-    // })
-  },
-  uploadImg:function(e){
-    wx.scanCode({
-      success(res){
-        console.log(res)
       }
     })
   },

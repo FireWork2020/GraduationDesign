@@ -1,18 +1,35 @@
-<div>
+<div class="out-container">
 <div class="sum">
   <text>年月：{{date}}</text>
   <text class="top-right">总积分:{{totalScore}}</text>
 </div>
-<div class="item-container">
-  <view wx:for="{{integrateHistory}}">
-    <view class="item">
-      <view class="left">
-        <text class="info">分类:{{item.classification}}</text>
-        <text class="info">日期:{{item.date}}</text>
-      </view>
-      <view class="right">
-        <text class="info">备注:{{item.remark}}</text>
-      </view>
+<div class="kind-container">
+  <view class="kind-row">
+    <view class="kind">
+      <view class="info">分类:{{}}</view>
+      <view class="info">数量:{{}}</view>
+      <view class="info">积分:{{}}</view>
+      <view class="info">上次结算日期:{{}}</view>
+    </view>
+    <view class="kind">
+      <view class="info">分类:{{}}</view>
+      <view class="info">数量:{{}}</view>
+      <view class="info">积分:{{}}</view>
+      <view class="info">上次结算日期:{{}}</view>
+    </view>
+  </view>
+  <view class="kind-row">
+    <view class="kind">
+      <view class="info">分类:{{}}</view>
+      <view class="info">数量:{{}}</view>
+      <view class="info">积分:{{}}</view>
+      <view class="info">上次结算日期:{{}}</view>
+    </view>
+    <view class="kind">
+      <view class="info">分类:{{}}</view>
+      <view class="info">数量:{{}}</view>
+      <view class="info">积分:{{}}</view>
+      <view class="info">上次结算日期:{{}}</view>
     </view>
   </view>
 </div>

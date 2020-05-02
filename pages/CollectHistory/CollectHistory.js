@@ -32,7 +32,7 @@ Page({
     wx.request({
       url: 'http://localhost:8080/get/collectHistory',
       data: {
-        userInfo: userInfo.nickName
+        userName: userInfo.nickName
       },
       success(res) {
         this.setData({
