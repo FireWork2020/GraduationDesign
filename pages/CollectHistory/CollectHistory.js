@@ -7,14 +7,20 @@ Page({
    */
   data: {
     date:null,
+    category:[
+      '可回收物',
+      '厨余垃圾',
+      '有害垃圾',
+      '其它垃圾'
+    ],
     collectHistory:[
       {
-        classification:'分类',
+        classification:'其它垃圾',
         date:'2020-04-02',
         remart:'无'
       },
       {
-        classification: '分类',
+        classification: '厨余垃圾',
         date: '2020-04-02',
         remart: '无'
       }

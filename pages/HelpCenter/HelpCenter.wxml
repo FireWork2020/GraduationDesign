@@ -1,2 +1,15 @@
-<!--pages/HelpCenter/HelpCenter.wxml-->
-<text>pages/HelpCenter/HelpCenter.wxml</text>
+<div class="container">
+  <div class="msg-container">
+    <div class="topic">
+      <text>主题:</text>
+      <input ></input>
+    </div>
+    <div class="content">
+      <text>描述:</text>
+      <input ></input>
+    </div>
+  </div>
+  <div class="submit">
+    <button>提交</button>
+  </div>
+</div>

@@ -3,13 +3,20 @@
 </div>
 <div class="login">
   <div class="password-login">
-    <form > 
-      <input class="input" placeholder="账号"></input>
-      <input class="input" password="true" placeholder="密码"></input>
-      <button bindtap="passwordLogin">登录</button>
+    <form >
+      <div class="msg-row">
+        <text>账号:</text>
+        <input class="input" placeholder="输入账号"></input>
+      </div>
+      <div class="msg-row">
+        <text>密码:</text>
+        <input class="input" password="true" placeholder="输入密码"></input>
+      </div>
+      <div class="but-row">
+        <button bindtap="passwordLogin" class="login">登录</button>
+        <button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">微信登录</button>
+        <button class="signin">注册</button>
+      </div>
     </form>
-  </div>
-  <div class="wechat-login">
-    <button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">微信登录</button>
   </div>
 </div>

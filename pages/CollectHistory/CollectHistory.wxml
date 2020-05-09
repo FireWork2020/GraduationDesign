@@ -1,7 +1,8 @@
-<div>
+<div class="container">
 <div class="sum">
-  <text>年月：{{date}}</text>
+  <text>最后更新时间：{{date}}</text>
 </div>
+<div class="parting-line"></div>
 <div class="item-container">
   <view wx:for="{{collectHistory}}">
     <view class="item">

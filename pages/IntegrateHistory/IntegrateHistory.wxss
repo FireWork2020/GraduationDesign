@@ -1,10 +1,28 @@
 /* pages/IntegrateHistory/IntegrateHistory.wxss */
 .out-container{
   width: 100%;
-  height: 100%;
 }
 .sum{
-  border: 1px;
-  background-color: rgb(167, 163, 163);
+  width:100%;
+  text-align: right;
+}
+.row{
+  width: 100%;
+}
+.msg{
+  width:100%;
+  text-align: right;
+}
+.kind-container{
+  width: 100%;
+}
+.kind-row{
+  width:100%;
+  display: flex;
+}
+.kind{
+  width: 100%;
+  background-color: greenyellow;
+  margin:15rpx 0;
 }
 

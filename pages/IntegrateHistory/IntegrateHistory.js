@@ -8,16 +8,32 @@ Page({
   data: {
     date: null,
     totalScore:404,
-    integrateHistory: [
+    kinds: [
+      "可回收物",
+      "厨余垃圾",
+      "有害垃圾",
+      "其它垃圾"
+    ],
+    msgs: [
       {
-        classification: '分类',
+        num:0,
         date: '2020-04-02',
-        remart: '无'
+        remark: 1
       },
       {
-        classification: '分类',
+        num:2,
         date: '2020-04-02',
-        remart: '无'
+        remark: 2
+      },
+      {
+        num: 3,
+        date: '2020-04-02',
+        remark: 3
+      },
+      {
+        num: 4,
+        date: '2020-04-02',
+        remark: 4
       }
     ]
   },
