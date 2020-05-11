@@ -7,12 +7,15 @@ Page({
   data: {
     notice:[
       {
+        topic:'主题一',
         content:'第一个'
       },
       {
+        topic:'主题二',
         content:'第二个'
       }
-    ]
+    ],
+    date:null
   },
   noticeDetail:function(options){
     console.log(options.currentTarget.dataset.index);
@@ -22,6 +25,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var time = util.formatTime(new Date());
+    this.setData({
+      date: time
+    })
     wx.request({
       url: 'http://localhost:8080/get/smartHouse',
       success(res) {

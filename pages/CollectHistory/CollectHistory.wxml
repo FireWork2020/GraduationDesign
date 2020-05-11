@@ -7,7 +7,7 @@
   <view wx:for="{{collectHistory}}">
     <view class="item">
       <view class="left">
-        <text class="info">分类:{{item.classification}}</text>
+        <text class="info">分类:{{category[item.classification]}}</text>
         <text class="info">日期:{{item.date}}</text>
       </view>
       <view class="right">

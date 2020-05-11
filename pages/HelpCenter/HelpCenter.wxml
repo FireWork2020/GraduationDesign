@@ -6,7 +6,7 @@
     </div>
     <div class="content">
       <text>描述:</text>
-      <input ></input>
+      <textarea></textarea>
     </div>
   </div>
   <div class="submit">

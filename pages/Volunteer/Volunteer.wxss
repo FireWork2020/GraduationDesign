@@ -3,8 +3,11 @@
   border: 1px;
 }
 .item{
+  padding-top:15rpx;
+  padding-bottom: 15rpx;
   width: 100%;
   display: flex;
+  background-color: rgb(221, 241, 191);
 }
 .left{
   width:50%;
@@ -13,6 +16,10 @@
 }
 .right{
   width: 50%;
+}
+.right button{
+  padding:0rpx;
+  width:50%;
 }
 .item{
   width: 100%;

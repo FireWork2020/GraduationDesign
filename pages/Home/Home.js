@@ -6,7 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    userInfo:null,
+    userInfo:app.globalData.userInfo,
     collectHistory:null,
     integrateHistory:null,
     smartHouses:null,
@@ -48,9 +48,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({
-      userInfo:app.globalData.userInfo
-    })
+    
   },
 
   /**
@@ -64,7 +62,10 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.setData({
+      'userInfo': this.app.globalData.userInfo
+    })
+    console.log(this.userInfo);
   },
 
   /**

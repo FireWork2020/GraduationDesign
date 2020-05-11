@@ -10,7 +10,7 @@
   </picker>
 </div>
 <div class="container">
-  <button bindtap="getCode">提交凭证</button>
+  <button bindtap="getCode">扫描二维码</button>
 </div>
 <div class="container">
   <form>

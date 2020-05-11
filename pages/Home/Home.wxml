@@ -34,7 +34,7 @@
     </div>
     <div class="item"> 
       <image src="../../Img/Icon/5.png"></image>
-      <text bindtap="notice">公告</text>
+      <text bindtap="notice">通知</text>
     </div>
     <div class="item"> 
       <image src="../../Img/Icon/6.png"></image>
