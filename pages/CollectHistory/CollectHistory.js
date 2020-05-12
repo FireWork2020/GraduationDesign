@@ -33,27 +33,25 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(app.globalData.userInfo);
+    this.userInfo = app.globalData.userInfo;
+    var time = util.formatTime(new Date());
     this.setData({
-      'userInfo':app.globalData.userInfo
+      date:time
+    });
+    var that = this;
+    wx.request({
+      url: 'http://localhost:8080/get/collectHistory', 
+      data: {
+        userName: this.userInfo.nickName
+      },
+      success(res) {
+        that.setData({
+          collectHistory: res.data
+        })
+        console.log(res);
+      }
     })
-    console.log(this.userInfo);
-    // var time = util.formatTime(new Date());
-    // this.setData({
-    //   date:time
-    // });
-    // var that = this;
-    // wx.request({
-    //   url: 'http://localhost:8080/get/collectHistory', 
-    //   data: {
-    //     userName: userInfo.nickName
-    //   },
-    //   success(res) {
-    //     that.setData({
-    //       collectHistory: res
-    //     })
-    //   }
-    // })
+    console.log(this.collectHistory);
   },
 
   /**

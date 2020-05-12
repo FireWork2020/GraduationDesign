@@ -11,6 +11,7 @@
 </div>
 <div class="container">
   <button bindtap="getCode">扫描二维码</button>
+  <text>验证码：{{collectCode}}</text>
 </div>
 <div class="container">
   <form>

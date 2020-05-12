@@ -7,11 +7,11 @@
   <view wx:for="{{collectHistory}}">
     <view class="item">
       <view class="left">
-        <text class="info">分类:{{category[item.classification]}}</text>
+        <text class="info">分类:{{category[item.type]}}</text>
         <text class="info">日期:{{item.date}}</text>
       </view>
       <view class="right">
-        <text class="info">备注:{{item.remark}}</text>
+        <text class="info">备注:{{item.collectcode}}</text>
       </view>
     </view>
   </view>

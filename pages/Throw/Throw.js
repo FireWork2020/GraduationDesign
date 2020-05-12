@@ -29,34 +29,33 @@ Page({
     })
   },
   submit:function(e){
-    console.log(this.data.index);
-    console.log(this.data.userInfo.nickName);
-    console.log(this.data.collectCode);
+    let that = this;
     wx.request({
       url: 'http://localhost:8080/submit/submitTask',
       data:{
-        userName:this.data.userInfo.nickName,
+        userName:this.userInfo.nickName,
         type:this.data.index,
         collectCode:this.data.collectCode
       },
       success(res){
         console.log(res);
-      }
-    })
-  },
-  selectChange:function(e){
-    console.log(e);
-    this.setData({
-      index:e.detail.value
-    })
-    wx.request({
-      url: 'http://localhost:8080/get/getCollectCode',
-      data:{
-        index:this.index
+        that.setData({
+          collectCode:0
+        });
+        wx.showToast({
+          title: '成功',
+          icon: 'success',
+          duration: 1500
+        });
       },
-      success(res){
-        this.setData({
-          collectCode:res.collectCode
+      fail(res){
+        console.log(res);
+        that.setData({
+          collectCode: 0
+        });
+        wx.showToast({
+          title: '失败',
+          duration:1500
         })
       }
     })
@@ -65,11 +64,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var that = this;
-    that.setData({
-      'userInfo':app.globalData.userInfo
-    })
-    console.log(userInfo);
+    this.userInfo = app.globalData.userInfo;
   },
 
   /**

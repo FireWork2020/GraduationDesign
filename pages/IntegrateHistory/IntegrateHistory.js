@@ -1,5 +1,6 @@
 // pages/IntegrateHistory/IntegrateHistory.js
 var util = require('../../utils/util.js');
+const app = getApp();
 Page({
 
   /**
@@ -14,28 +15,9 @@ Page({
       "有害垃圾",
       "其它垃圾"
     ],
-    msgs: [
-      {
-        num:0,
-        date: '2020-04-02',
-        remark: 1
-      },
-      {
-        num:2,
-        date: '2020-04-02',
-        remark: 2
-      },
-      {
-        num: 3,
-        date: '2020-04-02',
-        remark: 3
-      },
-      {
-        num: 4,
-        date: '2020-04-02',
-        remark: 4
-      }
-    ]
+    value:[1,2,3,4],
+    num:[1,2,3,4],
+    dateLastCheck:null,
   },
 
   /**
@@ -43,20 +25,23 @@ Page({
    */
   onLoad: function (options) {
     var time = util.formatTime(new Date());
+    var that = this;
     this.setData({
       date: time
     })
+    this.userInfo = app.globalData.userInfo;
+    console.log(this.userInfo);
     wx.request({
       url: 'http://localhost:8080/get/integrateHistory',
       data: {
-        userInfo: userInfo.nickName
+        userName: this.userInfo.nickName
       },
       success(res) {
-        this.setData({
-          integrateHistory: res
+        that.setData({
+          num: res.data
         })
       }
-    })
+    });
   },
 
   /**

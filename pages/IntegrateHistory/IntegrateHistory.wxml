@@ -5,34 +5,31 @@
 <div class="kind-container">
   <view class="kind">
       <view class="info">分类:{{kinds[0]}}</view>
-      <view class="info">数量:{{msgs[0].num}}</view>
-      <view class="info">种类分值:{{msgs[0].remark}}</view>
-      <view class="info">积分:{{msgs[0].num * msgs[0].remark}}</view>
-      <view class="info">上次结算日期:{{msgs[0].date}}</view>
+      <view class="info">数量:{{num[0]}}</view>
+      <view class="info">分类权值:{{value[0]}}</view>
+      <view class="info">积分:{{num[0]* value[0]}}</view>
   </view>
   <view class="kind">
       <view class="info">分类:{{kinds[1]}}</view>
-      <view class="info">数量:{{msgs[1].num}}</view>
-      <view class="info">种类分值:{{msgs[1].remark}}</view>
-      <view class="info">积分:{{msgs[1].num * msgs[1].remark}}</view>
-      <view class="info">上次结算日期:{{msgs[1].date}}</view>
+      <view class="info">数量:{{num[1]}}</view>
+      <view class="info">分类权值:{{value[1]}}</view>
+      <view class="info">积分:{{num[1]* value[1]}}</view>
   </view>
   <view class="kind">
       <view class="info">分类:{{kinds[2]}}</view>
-      <view class="info">数量:{{msgs[2].num}}</view>
-      <view class="info">种类分值:{{msgs[2].remark}}</view>
-      <view class="info">积分:{{msgs[2].num * msgs[2].remark}}</view>
-      <view class="info">上次结算日期:{{msgs[2].date}}</view>
+      <view class="info">数量:{{num[2]}}</view>
+      <view class="info">分类权值:{{value[2]}}</view>
+      <view class="info">积分:{{num[2]* value[2]}}</view>
   </view>
   <view class="kind">
       <view class="info">分类:{{kinds[3]}}</view>
-      <view class="info">数量:{{msgs[3].num}}</view>
-      <view class="info">种类分值:{{msgs[3].remark}}</view>
-      <view class="info">积分:{{msgs[3].num * msgs[3].remark}}</view>
-      <view class="info">上次结算日期:{{msgs[3].date}}</view>
+      <view class="info">数量:{{num[3]}}</view>
+      <view class="info">分类权值:{{value[3]}}</view>
+      <view class="info">积分:{{num[3]* value[3]}}</view>
   </view>
   <view class="kind">
       <view class="info">总积分:{{totalScore}}</view>
+      <view class="info">上次结算日期:{{date}}</view>
   </view>
 </div>
 </div>
