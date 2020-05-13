@@ -22,10 +22,10 @@ Page({
    */
   onLoad: function (options) {
     wx.request({
-      url: 'http://localhost:8080/get/smartHouse',
+      url: 'http://localhost:8080/get/getVolunteerInfo',
       success(res) {
         this.setData({
-          volunteerService: res
+          volunteerService: res.data
         })
       }
     })

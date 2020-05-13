@@ -26,16 +26,14 @@ Page({
    */
   onLoad: function (options) {
     var time = util.formatTime(new Date());
-    this.setData({
-      date: time
-    })
+    this.date = time;
+    var that = this;
     wx.request({
-      url: 'http://localhost:8080/get/smartHouse',
+      url: 'http://localhost:8080/get/getNotice',
       success(res) {
-        this.setData({
-          notice: res
+        that.setData({
+          notice: res.data
         })
-        
       }
     })
   },
