@@ -1,4 +1,5 @@
 // pages/Notice/Notice.js
+var util = require('../../utils/util.js');
 Page({
 
   /**
@@ -8,11 +9,11 @@ Page({
     notice:[
       {
         topic:'主题一',
-        content:'第一个'
+        msg:'第一个'
       },
       {
         topic:'主题二',
-        content:'第二个'
+        msg:'第二个'
       }
     ],
     date:null

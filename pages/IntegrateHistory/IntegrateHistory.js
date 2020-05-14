@@ -39,9 +39,17 @@ Page({
       success(res) {
         that.setData({
           num: res.data
-        })
+        });
+        var total = 0;
+        for(var i = 0 ;i < num.length;i++){
+          total += (num[i] * value[i]);
+        }
+        that.setData({
+          totalScore:total
+        });
       }
     });
+
   },
 
   /**

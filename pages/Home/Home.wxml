@@ -30,7 +30,7 @@
   <div class="item-container">
     <div class="item"> 
       <image src="../../Img/Icon/4.png"></image>
-      <text bindtap="smartHouse">美丽庭院</text>
+      <text bindtap="ansRecord">回复记录</text>
     </div>
     <div class="item"> 
       <image src="../../Img/Icon/5.png"></image>

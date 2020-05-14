@@ -11,13 +11,13 @@
     "pages/IntegrateHistory/IntegrateHistory",
     "pages/Notice/Notice",
     "pages/Volunteer/Volunteer",
-    "pages/SmartHouse/SmartHouse",
     "pages/Admin/Admin",
     "pages/AdminCollectHistory/AdminCollectHistory",
-    "pages/AdminSmartHouse/AdminSmartHouse",
     "pages/AdminNotice/AdminNotice",
     "pages/AdminVolunteer/AdminVolunteer",
-    "pages/AdminPeople/AdminPeople"
+    "pages/AdminPeople/AdminPeople",
+    "pages/Detail/Detail",
+    "pages/Q&A/Q&A"
   ],
   "window": {
     "backgroundTextStyle": "light",

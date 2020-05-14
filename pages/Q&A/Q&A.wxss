@@ -1,0 +1,13 @@
+.container{
+  width:100%;
+}
+.msg-container{
+  width:100%;
+}
+.topic input{
+  background-color: rgb(173, 162, 162);
+}
+.content textarea{
+  background-color: rgb(168, 147, 147);
+  width: 100%;
+}

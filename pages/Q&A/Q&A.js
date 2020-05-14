@@ -1,26 +1,43 @@
-// pages/SmartHouse/SmartHouse.js
+// pages/HelpCenter/HelpCenter.js
+const app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    smartHouses:null
+    questions:[
+      {
+        topic:'topic',
+        msg:'msg',
+        ans:'ans'
+      }
+    ]
   },
 
+  submit: function (e) {
+    var topic = e.detail.value.topic;
+    var msg = e.detail.value.msg;
+    console.log(topic);
+    console.log(msg);
+    
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var that = this;
     wx.request({
-      url: 'http://localhost:8080/get/smartHouse',
+      url: 'http://localhost:8080/get/getQues&Ans',
+      data: {
+        userName: app.globalData.userInfo.nickName,
+      },
       success(res) {
-        this.setData({
-          smartHouses: res
+        that.setData({
+          questions:res.data
         })
-        
       }
-    })
+    });
   },
 
   /**

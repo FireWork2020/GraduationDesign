@@ -1,4 +1,4 @@
-// pages/AdminSmartHouse/AdminSmartHouse.js
+// pages/Detail/Detail.js
 Page({
 
   /**

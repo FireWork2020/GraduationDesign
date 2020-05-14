@@ -1,15 +1,17 @@
 <div class="container">
   <div class="msg-container">
-    <div class="topic">
-      <text>主题:</text>
-      <input ></input>
-    </div>
-    <div class="content">
-      <text>描述:</text>
-      <textarea></textarea>
-    </div>
-  </div>
-  <div class="submit">
-    <button>提交</button>
+    <form bindsubmit="submit">
+      <div class="topic">
+        <text>主题:</text>
+        <input name="topic"></input>
+      </div>
+      <div class="content">
+       <text>描述:</text>
+       <textarea name="msg"></textarea>
+      </div>
+      <div class="submit">
+        <button form-type="submit">提交</button>
+      </div>
+    </form>
   </div>
 </div>

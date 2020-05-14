@@ -29,9 +29,9 @@ Page({
       url: '/pages/HelpCenter/HelpCenter',
     })
   },
-  smartHouse: function (e) {
+  ansRecord: function (e) {
     wx.navigateTo({
-      url: '/pages/SmartHouse/SmartHouse'
+      url: '/pages/Q&A/Q&A'
     })
   },
   notice: function (e) {

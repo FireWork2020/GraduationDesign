@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="msg-container" wx:for="{{questions}}">
+      <div class="topic">
+        <text>主题:</text>
+        <text name="topic">{{item.topic}}</text>
+      </div>
+      <div class="content">
+       <text>描述:</text>
+       <text name="msg">{{item.msg}}</text>
+      </div>
+      <div class="ans">
+       <text>回复:</text>
+       <text name="msg">{{item.ans}}</text>
+      </div>
+  </div>
+</div>
