@@ -23,6 +23,10 @@
   width:70%;
   padding:8px 24px;
 }
-.item button{
+.item navigator{
   width:20%;
+  height: fit-content;
+  text-align: center;
+  background-color: rgb(179, 230, 102);
+  padding:8rpx 0rpx;
 }

@@ -7,7 +7,7 @@
   <div wx:for="{{notice}}">
     <div class="item">
       <view class="topic" bindtap="noticeDetail" data-index="{{index}}">{{item.topic}}</view>
-      <button bindtap="noticeDetail">详情</button>
+      <navigator url="/pages/Detail/Detail?topic={{item.topic}}&msg={{item.msg}}">详情</navigator>
     </div>
   </div>
 </div>

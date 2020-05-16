@@ -10,7 +10,7 @@
         <text class="info">日期:{{item.date}}</text>
       </view>
       <view class="right">
-        <button class="info" bindtap="detail" data-index="{{index}}">详细信息</button>
+        <navigator class="info" url="/pages/Detail/Detail?topic={{item.name}}&msg={{item.remark}}">详细信息</navigator>
         <button class="info" bindtap="apply" data-index="{{index}}">我要报名</button>
       </view>
     </view>

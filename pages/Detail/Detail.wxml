@@ -1,2 +1,4 @@
-<!--pages/Detail/Detail.wxml-->
-<text>pages/Detail/Detail.wxml</text>
+<div class="container">
+  <text>{{topic}}</text>
+  <text>{{msg}}</text>
+</div>
