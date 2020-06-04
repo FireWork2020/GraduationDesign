@@ -1,40 +1,53 @@
-// pages/HelpCenter/HelpCenter.js
-const app = getApp();
+// pages/Notice/Notice.js
+var util = require('../../utils/util.js');
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
-  },
-
-  submit: function (e) {
-    var topic = e.detail.value.topic;
-    var msg = e.detail.value.msg;
-    console.log(topic);
-    console.log(msg);
-    wx.request({
-      url: 'http://localhost:8080/post/releaseNotice',
-      method: POST,
-      data: {
-        topic: topic,
-        msg: msg
+    users:[
+      {
+        userName:'张三',
+        grade:123
       },
-      success(res) {
-        wx.showToast({
-          title: '成功',
-          icon: 'success',
-          duration: 1500
-        })
+      {
+        userName: '李四',
+        grade: 123
       }
-    });
+    ],
+    date: null
   },
+  noticeDetail: function (options) {
+    console.log(options.currentTarget.dataset.index);
+  },
+  toZero:function(options){
+    wx.request({
+      url: 'http://localhost:8080/post/grateToZero',
+      data:{
+        userName:options.data.index
+      },
+      success(res){
+        console.log('结算完成')
+      }
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var time = util.formatTime(new Date());
+    this.date = time;
+    var that = this;
+    wx.request({
+      url: 'http://localhost:8080/get/getNotice',
+      success(res) {
+        that.setData({
+          notice: res.data
+        })
+      }
+    })
   },
 
   /**

@@ -4,13 +4,18 @@
       <div class="topic">
         <text>主题:</text>
         <input name="topic"></input>
+        <text>{{}}</text>
       </div>
       <div class="content">
        <text>描述:</text>
-       <textarea name="msg"></textarea>
+       <text name="msg"></text>
+      </div>
+      <div class="response">
+        <text>回复</text>
+        <textarea name="response"></textarea>
       </div>
       <div class="submit">
-        <button form-type="submit">发布</button>
+        <button form-type="submit">回复</button>
       </div>
     </form>
   </div>

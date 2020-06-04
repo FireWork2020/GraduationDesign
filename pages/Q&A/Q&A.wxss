@@ -1,13 +1,16 @@
 .container{
   width:100%;
+  padding:0 0;
 }
 .msg-container{
   width:100%;
+  display: block;
+  float:left;
+  background-color: gray;
+  padding-top: 10rpx;
 }
-.topic input{
-  background-color: rgb(173, 162, 162);
-}
-.content textarea{
-  background-color: rgb(168, 147, 147);
-  width: 100%;
+.msg{
+  width:100%;
+  display: block;
+  background-color: white;
 }

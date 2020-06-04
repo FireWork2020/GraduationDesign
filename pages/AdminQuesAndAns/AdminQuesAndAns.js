@@ -1,22 +1,50 @@
-// pages/AdminPeople/AdminPeople.js
+// pages/Notice/Notice.js
+var util = require('../../utils/util.js');
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    people:null
+    users: [
+      {
+        userName: '张三',
+        grade: 123
+      },
+      {
+        userName: '李四',
+        grade: 123
+      }
+    ],
+    date: null
+  },
+  noticeDetail: function (options) {
+    console.log(options.currentTarget.dataset.index);
+  },
+  toZero: function (options) {
+    wx.request({
+      url: 'http://localhost:8080/post/grateToZero',
+      data: {
+        userName: options.data.index
+      },
+      success(res) {
+        console.log('结算完成')
+      }
+    })
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var time = util.formatTime(new Date());
+    this.date = time;
+    var that = this;
     wx.request({
-      url: 'http://localhost:8080/get/allPeople',
-      success(res){
-        this.setData({
-          people:res
+      url: 'http://localhost:8080/get/getNotice',
+      success(res) {
+        that.setData({
+          notice: res.data
         })
       }
     })

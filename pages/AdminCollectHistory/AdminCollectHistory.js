@@ -1,5 +1,6 @@
 // pages/CollectHistory/CollectHistory.js
 var util = require('../../utils/util.js');
+const app = getApp();
 Page({
 
   /**
@@ -7,16 +8,23 @@ Page({
    */
   data: {
     date: null,
+    category: [
+      '可回收物',
+      '厨余垃圾',
+      '有害垃圾',
+      '其它垃圾'
+    ],
+    userInfo: app.globalData.userInfo,
     collectHistory: [
       {
-        classification: '分类',
+        type: 3,
         date: '2020-04-02',
-        name:'Daming'
+        collectcode: '123123'
       },
       {
-        classification: '分类',
+        type: 1,
         date: '2020-04-02',
-        name:'XiaoHong'
+        collectcode: '232323'
       }
     ]
   },
@@ -25,18 +33,22 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.userInfo = app.globalData.userInfo;
     var time = util.formatTime(new Date());
     this.setData({
       date: time
-    })
+    });
+    var that = this;
     wx.request({
       url: 'http://localhost:8080/get/allCollectHistory',
       success(res) {
-        this.setData({
-          collectHistory: res
+        that.setData({
+          collectHistory: res.data
         })
+        console.log(res);
       }
     })
+    console.log(this.collectHistory);
   },
 
   /**

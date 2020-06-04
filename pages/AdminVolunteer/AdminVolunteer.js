@@ -1,4 +1,5 @@
-// pages/AdminVolunteer/AdminVolunteer.js
+// pages/HelpCenter/HelpCenter.js
+const app = getApp();
 Page({
 
   /**
@@ -8,6 +9,27 @@ Page({
 
   },
 
+  submit: function (e) {
+    var topic = e.detail.value.topic;
+    var msg = e.detail.value.msg;
+    console.log(topic);
+    console.log(msg);
+    wx.request({
+      url: 'http://localhost:8080/post/releaseActivity',
+      method: POST,
+      data: {
+        topic: topic,
+        msg: msg
+      },
+      success(res) {
+        wx.showToast({
+          title: '成功',
+          icon: 'success',
+          duration: 1500
+        })
+      }
+    });
+  },
   /**
    * 生命周期函数--监听页面加载
    */

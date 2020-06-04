@@ -1,1 +1,13 @@
-/* pages/Detail/Detail.wxss */
+.container{
+  padding:0 0;
+}
+.topic{
+  width:100%;
+}
+.content{
+  width:100%;
+  display: flex;
+}
+.msg{
+  width:100%;
+}

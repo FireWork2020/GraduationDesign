@@ -9,8 +9,12 @@ Page({
     questions:[
       {
         topic:'topic',
-        msg:'msg',
+        content:'msg',
         ans:'ans'
+      },{
+        topic:'question1',
+        content:'content1',
+        ans:'ans1'
       }
     ]
   },

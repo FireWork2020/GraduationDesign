@@ -18,19 +18,14 @@ Page({
       url: '/pages/AdminCollectHistory/AdminCollectHistory',
     })
   },
-  adminPeople: function (e) {
+  integrateHistory:function(e){
     wx.navigateTo({
-      url: '/pages/AdminPeople/AdminPeople',
+      url: '/pages/AdminIntegrateHistory/AdminIntegrateHistory',
     })
   },
-  helpCenter: function (e) {
+  questionAndAns:function(e){
     wx.navigateTo({
-      url: '/pages/AdminHelpCenter/AdminHelpCenter',
-    })
-  },
-  smartHouse: function (e) {
-    wx.navigateTo({
-      url: '/pages/AdminSmartHouse/AdminSmartHouse'
+      url: '/pages/AdminQuesAndAns/AdminQuesAndAns',
     })
   },
   notice: function (e) {

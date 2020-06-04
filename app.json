@@ -15,9 +15,11 @@
     "pages/AdminCollectHistory/AdminCollectHistory",
     "pages/AdminNotice/AdminNotice",
     "pages/AdminVolunteer/AdminVolunteer",
-    "pages/AdminPeople/AdminPeople",
     "pages/Detail/Detail",
-    "pages/Q&A/Q&A"
+    "pages/Q&A/Q&A",
+    "pages/AdminIntegrateHistory/AdminIntegrateHistory",
+    "pages/AdminQuesAndAns/AdminQuesAndAns",
+    "pages/AdminResponse/AdminResponse"
   ],
   "window": {
     "backgroundTextStyle": "light",

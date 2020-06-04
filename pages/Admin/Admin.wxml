@@ -11,34 +11,45 @@
     </swiper-item>
   </swiper>
 </div>
-<div class="classification">
-  <div class="item-container">
-    <div class="item"> 
+<div class="button-container">
+  <div class="classification">
+    <div class="img">
       <image src="../../Img/Icon/1.png"></image>
-      <div class="next-line"></div>
-      <text bindtap="collectHistory">回收记录</text>
-    </div> 
-    <div class="item"> 
-      <image src="../../Img/Icon/2.png"></image>
-      <text bindtap="adminPeople">人员查看</text>
     </div>
-    <div class="item"> 
-      <image src="../../Img/Icon/3.png"></image>
-      <text bindtap="helpCenter">问题解答</text>
+    <div class="title">
+      <button bindtap="collectHistory">回收记录</button>
     </div>
   </div>
-  <div class="item-container">
-    <div class="item"> 
+  <div class="classification">
+    <div class="img">
+      <image src="../../Img/Icon/2.png"></image>
+    </div>
+    <div class="title">
+      <button bindtap="integrateHistory">积分记录</button>
+    </div>
+  </div>
+  <div class="classification">
+    <div class="img">
+      <image src="../../Img/Icon/3.png"></image>
+    </div>
+    <div class="title">
+      <button bindtap="questionAndAns">问题回复</button>
+    </div>
+  </div>
+  <div class="classification">
+    <div class="img">
       <image src="../../Img/Icon/4.png"></image>
-      <text bindtap="smartHouse">家庭评优</text>
     </div>
-    <div class="item"> 
+    <div class="title">
+      <button bindtap="notice">通知传达</button>
+    </div>
+  </div>
+  <div class="classification">
+    <div class="img">
       <image src="../../Img/Icon/5.png"></image>
-      <text bindtap="notice">发布公告</text>
     </div>
-    <div class="item"> 
-      <image src="../../Img/Icon/6.png"></image>
-      <text bindtap="volunteerService">志愿者服务</text>
+    <div class="title">
+      <button bindtap="volunteerService">志愿活动</button>
     </div>
   </div>
 </div>

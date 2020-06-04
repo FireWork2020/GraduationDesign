@@ -1,4 +1,8 @@
 <div class="container">
-  <text>{{topic}}</text>
-  <text>{{msg}}</text>
+  <text class="topic">主题: {{topic}}</text>
+  <div class="content">
+    <text class="msg">详细内容:</text>
+    <text class="msg">{{msg}}</text>
+  </div>
+  
 </div>

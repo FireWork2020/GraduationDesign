@@ -1,2 +1,17 @@
-<!--pages/AdminNotice/AdminNotice.wxml-->
-<text>pages/AdminNotice/AdminNotice.wxml</text>
+<div class="container">
+  <div class="msg-container">
+    <form bindsubmit="submit">
+      <div class="topic">
+        <text>主题:</text>
+        <input name="topic"></input>
+      </div>
+      <div class="content">
+       <text>描述:</text>
+       <textarea name="msg"></textarea>
+      </div>
+      <div class="submit">
+        <button form-type="submit">提交</button>
+      </div>
+    </form>
+  </div>
+</div>
