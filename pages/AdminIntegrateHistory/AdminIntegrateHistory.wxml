@@ -5,9 +5,9 @@
 </div>
   <div class="item-container" wx:for="{{users}}">
     <div class="item">
-      <view class="topic" bindtap="noticeDetail" data-index="{{index}}">{{item.userName}}</view>
-      <view class="topic" bindtap="noticeDetail" data-index="{{index}}">{{item.grade}}</view>
-      <button bindtap="toZero">结算</button>
+      <view class="topic" bindtap="toZero">{{item.userName}}</view>
+      <view class="topic" bindtap="toZero">{{item.grade}}</view>
+      <button bindtap="toZero" data-index="{{index}}" data-username="{{item.userName}}">结算</button>
     </div>
-  </div>
+  </div> 
 </div>

@@ -18,17 +18,21 @@ Page({
     ],
     date: null
   },
-  noticeDetail: function (options) {
-    console.log(options.currentTarget.dataset.index);
-  },
-  toZero:function(options){
+  toZero:function(event){
+    console.log(event);
+    console.log(event.currentTarget.dataset.username);
     wx.request({
       url: 'http://localhost:8080/post/grateToZero',
       data:{
-        userName:options.data.index
+        userName:event.currentTarget.dataset.username
       },
       success(res){
         console.log('结算完成')
+        wx.showToast({
+          title: '结算完成',
+          icon:'success',
+          duration:2000
+        })
       }
     })
   },

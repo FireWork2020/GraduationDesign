@@ -7,6 +7,7 @@ Page({
   data: {
     volunteerService:[
       {
+        id:1,
         name:'捡垃圾',
         date:'2020-04-02',
         remark:'无'

@@ -16,7 +16,7 @@ Page({
     console.log(msg);
     wx.request({
       url: 'http://localhost:8080/post/helpCenter',
-      method:POST,
+      method:'POST',
       data: {
         userName: app.globalData.userInfo.nickName,
         topic:topic,

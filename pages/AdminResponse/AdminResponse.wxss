@@ -4,10 +4,31 @@
 .msg-container{
   width:100%;
 }
-.topic input{
-  background-color: rgb(173, 162, 162);
+.topic{
+  width:100%;
+  display: block;
+  padding:30rpx 20rpx;
 }
-.content textarea{
-  background-color: rgb(168, 147, 147);
-  width: 100%;
+.topic text{
+  width:100%;
+}
+.content{
+  width:100%;
+  display: block;
+  padding:30rpx 20rpx;
+}
+.content text{
+  width:100%;
+}
+.response{
+  width:100%;
+  padding:30rpx 20rpx;
+  display: block;
+}
+.response textarea{
+  background-color: rgb(150, 156, 154);
+}
+.form{
+  width:100%;
+  display: flex;
 }

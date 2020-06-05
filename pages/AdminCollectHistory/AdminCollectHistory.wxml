@@ -11,7 +11,7 @@
         <text class="info">日期:{{item.date}}</text>
       </view>
       <view class="right">
-        <text class="info">备注:{{item.collectcode}}</text>
+        <text class="info">用户:{{item.userName}}</text>
       </view>
     </view>
   </view>

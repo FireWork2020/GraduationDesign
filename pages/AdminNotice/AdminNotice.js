@@ -16,7 +16,7 @@ Page({
     console.log(msg);
     wx.request({
       url: 'http://localhost:8080/post/releaseNotice',
-      method: POST,
+      method: 'POST',
       data: {
         topic: topic,
         msg: msg

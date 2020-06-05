@@ -16,10 +16,26 @@ Page({
         grade: 123
       }
     ],
+    questions:[
+      {
+        id:1,
+        userName:'NanFu',
+        topic:'丢东西',
+        msg:'丢了钥匙',
+        ans:'找到了'
+      }
+    ],
     date: null
   },
   noticeDetail: function (options) {
     console.log(options.currentTarget.dataset.index);
+  },
+  response:function(event){
+    console.log(event.currentTarget.dataset.index);
+    var index = event.currentTarget.dataset.index;
+    wx.navigateTo({
+      url: '/pages/AdminResponse/AdminResponse?id='+this.data.questions[index].id+'&topic='+this.data.questions[index].topic+'&msg='+this.data.questions[index].msg,
+    })
   },
   toZero: function (options) {
     wx.request({

@@ -10,7 +10,7 @@
        <textarea name="msg"></textarea>
       </div>
       <div class="submit">
-        <button form-type="submit">发布</button>
+        <button form-type="submit">提交</button>
       </div>
     </form>
   </div>

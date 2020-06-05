@@ -6,20 +6,27 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    id:null,
+    topic:null,
+    msg:null,
+    ans:null
   },
-
+  getAns:function(e){
+    var that = this;
+    that.setData({
+      ans:e.detail.value
+    })
+  },
   submit: function (e) {
-    var topic = e.detail.value.topic;
-    var msg = e.detail.value.msg;
-    console.log(topic);
-    console.log(msg);
+    console.log(this.data.topic);
+    console.log(this.data.msg);
+    console.log(this.data.ans);
     wx.request({
-      url: 'http://localhost:8080/post/releaseNotice',
-      method: POST,
+      url: 'http://localhost:8080/post/ansQues',
+      method: 'POST',
       data: {
-        topic: topic,
-        msg: msg
+        id:this.data.id,
+        ans:this.data.ans
       },
       success(res) {
         wx.showToast({
@@ -34,7 +41,13 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log(options);
+    var that = this;
+    that.setData({
+      id:options.id,
+      topic:options.topic,
+      msg:options.msg
+    })
   },
 
   /**

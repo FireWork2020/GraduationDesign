@@ -1,18 +1,17 @@
 <div class="container">
   <div class="msg-container">
-    <form bindsubmit="submit">
-      <div class="topic">
+    <div class="topic">
         <text>主题:</text>
-        <input name="topic"></input>
-        <text>{{}}</text>
-      </div>
-      <div class="content">
+        <text>{{topic}}</text>
+    </div>
+    <div class="content">
        <text>描述:</text>
-       <text name="msg"></text>
-      </div>
+       <text>{{msg}}</text>
+    </div>
+    <form bindsubmit="submit" class="form">
       <div class="response">
         <text>回复</text>
-        <textarea name="response"></textarea>
+        <textarea name="response" bindinput="getAns"></textarea>
       </div>
       <div class="submit">
         <button form-type="submit">回复</button>

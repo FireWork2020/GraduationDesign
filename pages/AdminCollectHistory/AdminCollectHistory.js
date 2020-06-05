@@ -15,16 +15,11 @@ Page({
       '其它垃圾'
     ],
     userInfo: app.globalData.userInfo,
-    collectHistory: [
+    collectHistory:[
       {
-        type: 3,
-        date: '2020-04-02',
-        collectcode: '123123'
-      },
-      {
-        type: 1,
-        date: '2020-04-02',
-        collectcode: '232323'
+        userName:'NanFu',
+        type:0,
+        date:'2020-05-11'
       }
     ]
   },
