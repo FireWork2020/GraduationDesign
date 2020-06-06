@@ -45,10 +45,10 @@ Page({
     this.date = time;
     var that = this;
     wx.request({
-      url: 'http://localhost:8080/get/getNotice',
+      url: 'http://localhost:8080/get/userInfo',
       success(res) {
         that.setData({
-          notice: res.data
+          users: res.data
         })
       }
     })

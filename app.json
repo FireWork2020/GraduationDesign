@@ -19,7 +19,8 @@
     "pages/Q&A/Q&A",
     "pages/AdminIntegrateHistory/AdminIntegrateHistory",
     "pages/AdminQuesAndAns/AdminQuesAndAns",
-    "pages/AdminResponse/AdminResponse"
+    "pages/AdminResponse/AdminResponse",
+    "pages/AdminGarbageCan/AdminGarbageCan"
   ],
   "window": {
     "backgroundTextStyle": "light",

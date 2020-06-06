@@ -12,10 +12,33 @@ Page({
       "有害垃圾",
       "其它垃圾"
     ],
+    cans:[],
+    garbageCan:[
+      {
+        id:1,
+        location:1,
+        number:1,
+        state:1
+      },
+      {
+        id: 2,
+        location: 2,
+        number: 1,
+        state: 1
+      },
+      {
+        id: 3,
+        location: 3,
+        number: 1,
+        state: 1
+      }
+    ],
     index: 0,
     collectCode:0,
     imgPath:'',
-    userInfo:null
+    userInfo:null,
+    kindIndex:0,
+    canIndex:0
   },
   getCode:function(e){
     var that = this;
@@ -31,10 +54,11 @@ Page({
   submit:function(e){
     let that = this;
     wx.request({
-      url: 'http://localhost:8080/submit/submitTask',
+      url: 'http://localhost:8080/throw/submitTask',
       data:{
         userName:this.userInfo.nickName,
-        type:this.data.index,
+        type:this.data.kindIndex,
+        can:this.data.garbageCan[this.data.canIndex].id,
         collectCode:this.data.collectCode
       },
       success(res){
@@ -65,6 +89,42 @@ Page({
    */
   onLoad: function (options) {
     this.userInfo = app.globalData.userInfo;
+    var arr = new Array(this.data.garbageCan.length);
+    for (var i = 0; i < this.data.garbageCan.length; i++) {
+      arr[i] = this.data.garbageCan[i].location+'-'+this.data.garbageCan[i].number;
+    }
+    this.setData({
+      cans:arr
+    })
+    console.log(this.data.cans);
+    // let that = this;
+    // wx.request({
+    //   url: 'http://localhost:8080/get/getCans',
+    //   success(res) {
+    //     console.log(res);
+    //     that.setData({
+    //       garbageCan:res.data
+    //     });
+    //     wx.showToast({
+    //       title: '成功',
+    //       icon: 'success',
+    //       duration: 1500
+    //     });
+    //     for(var i;i < garbageCan.length;i++){
+    //       cans[i] = garbageCan[i].location+'-'+garbageCan[i].number;
+    //     }
+    //   },
+    //   fail(res) {
+    //     console.log(res);
+    //     that.setData({
+    //       collectCode: 0
+    //     });
+    //     wx.showToast({
+    //       title: '失败',
+    //       duration: 1500
+    //     })
+    //   }
+    // })
   },
 
   /**

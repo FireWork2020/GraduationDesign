@@ -37,18 +37,6 @@ Page({
       url: '/pages/AdminResponse/AdminResponse?id='+this.data.questions[index].id+'&topic='+this.data.questions[index].topic+'&msg='+this.data.questions[index].msg,
     })
   },
-  toZero: function (options) {
-    wx.request({
-      url: 'http://localhost:8080/post/grateToZero',
-      data: {
-        userName: options.data.index
-      },
-      success(res) {
-        console.log('结算完成')
-      }
-    })
-  },
-
   /**
    * 生命周期函数--监听页面加载
    */
@@ -57,10 +45,10 @@ Page({
     this.date = time;
     var that = this;
     wx.request({
-      url: 'http://localhost:8080/get/getNotice',
+      url: 'http://localhost:8080/get/getQuestion',
       success(res) {
         that.setData({
-          notice: res.data
+          questions: res.data
         })
       }
     })

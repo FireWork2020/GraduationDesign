@@ -15,8 +15,9 @@
 }
 .item-container{
   width:100%; 
-  background-color: gray;
+  background-color: rgb(121, 168, 106);
   padding-top:10rpx;
+  padding-bottom:10rpx;
 }
 .item{
   width:100%;

@@ -3,7 +3,7 @@
   <text>年月：{{date}}</text>
 </div>
 <div class="item-container">
-  <view wx:for="{{volunteerService}}">
+  <view wx:for="{{activity}}">
     <view class="item">
       <view class="left">
         <text class="info">名称:{{item.name}}</text>

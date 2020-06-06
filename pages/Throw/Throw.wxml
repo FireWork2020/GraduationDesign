@@ -3,9 +3,14 @@
   <text class="guide">选择分类 -> 提交验证 -> 提交任务</text>
 </div>
 <div class="container">
-  <picker bindchange="selectChange"  value="{{index}}" range="{{kinds}}" >
+  <picker bindchange="selectChange"  value="{{kindIndex}}" range="{{kinds}}" >
     <view>
       选择分类:{{kinds[index]}}
+    </view>
+  </picker>
+  <picker bindchange="selectChange"  value="{{canIndex}}" range="{{cans}}" >
+    <view>
+      选择垃圾桶:{{cans[canIndex]}}
     </view>
   </picker>
 </div>

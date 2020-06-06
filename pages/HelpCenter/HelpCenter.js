@@ -14,6 +14,7 @@ Page({
     var msg = e.detail.value.msg;
     console.log(topic);
     console.log(msg);
+    console.log(app.globalData.userInfo.nickName)
     wx.request({
       url: 'http://localhost:8080/post/helpCenter',
       method:'POST',

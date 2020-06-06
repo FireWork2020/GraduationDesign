@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    volunteerService:[
+    activity:[
       {
         id:1,
         name:'捡垃圾',
@@ -16,17 +16,31 @@ Page({
   },
 
   apply:function(options){
-
+    var index = options.index;
+    wx.request({
+      url: 'http://localhost:8080/post/applyActivity',
+      method:'POST',
+      data:{
+        userName: app.globalData.userInfo.nickName,
+        activityNum:activity[index].activityNum
+      },
+      success(res) {
+        this.setData({
+          activity: res.data
+        })
+      }
+    })
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var that = this;
     wx.request({
       url: 'http://localhost:8080/get/getVolunteerInfo',
       success(res) {
-        this.setData({
-          volunteerService: res.data
+        that.setData({
+          activity: res.data
         })
       }
     })

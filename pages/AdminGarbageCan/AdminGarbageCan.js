@@ -1,49 +1,18 @@
-// pages/CollectHistory/CollectHistory.js
-var util = require('../../utils/util.js');
-const app = getApp();
+// pages/AdminGarbageCan/AdminGarbageCan.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    date: null,
-    category: [
-      '可回收物',
-      '厨余垃圾',
-      '有害垃圾',
-      '其它垃圾'
-    ],
-    userInfo: app.globalData.userInfo,
-    collectHistory:[
-      {
-        username:'NanFu',
-        type:0,
-        date:'2020-05-11'
-      }
-    ]
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.userInfo = app.globalData.userInfo;
-    var time = util.formatTime(new Date());
-    this.setData({
-      date: time
-    });
-    var that = this;
-    wx.request({
-      url: 'http://localhost:8080/get/allCollectHistory',
-      success(res) {
-        that.setData({
-          collectHistory: res.data
-        })
-        console.log(res);
-      }
-    })
-    console.log(this.collectHistory);
+
   },
 
   /**
