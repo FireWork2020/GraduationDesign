@@ -21,12 +21,13 @@ Page({
     console.log(this.data.topic);
     console.log(this.data.msg);
     console.log(this.data.ans);
+    var that = this;
     wx.request({
       url: 'http://localhost:8080/post/ansQues',
       method: 'POST',
       data: {
-        id:this.data.id,
-        ans:this.data.ans
+        id:that.data.id,
+        ans:that.data.ans
       },
       success(res) {
         wx.showToast({

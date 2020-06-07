@@ -6,11 +6,11 @@
     <form >
       <div class="msg-row">
         <text>账号:</text>
-        <input class="input" placeholder="输入账号"></input>
+        <input class="input" model:value="{{account}}" placeholder="输入账号"></input>
       </div>
       <div class="msg-row">
         <text>密码:</text>
-        <input class="input" password="true" placeholder="输入密码"></input>
+        <input class="input" model:value="{{password}}" password="true" placeholder="输入密码"></input>
       </div>
       <div class="but-row">
         <button bindtap="passwordLogin" class="login">登录</button>

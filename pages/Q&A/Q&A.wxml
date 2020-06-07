@@ -6,7 +6,7 @@
       </div>
       <div class="msg">
        <text>描述: </text>
-       <text name="content">{{item.content}}</text>
+       <text name="content">{{item.msg}}</text>
       </div>
       <div class="msg">
        <text>回复: </text>

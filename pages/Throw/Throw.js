@@ -55,8 +55,9 @@ Page({
     let that = this;
     wx.request({
       url: 'http://localhost:8080/throw/submitTask',
+      method:'POST',
       data:{
-        userName:this.userInfo.nickName,
+        userName:app.globalData.userInfo.nickName,
         type:this.data.kindIndex,
         can:this.data.garbageCan[this.data.canIndex].id,
         collectCode:this.data.collectCode
@@ -88,43 +89,40 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.userInfo = app.globalData.userInfo;
+    // this.userInfo = app.globalData.userInfo;
+    let that = this;
+    wx.request({
+      url: 'http://localhost:8080/get/getCans',
+      success(res) {
+        console.log(res);
+        that.setData({
+          garbageCan:res.data
+        });
+        wx.showToast({
+          title: '成功',
+          icon: 'success',
+          duration: 1500
+        });
+      },
+      fail(res) {
+        console.log(res);
+        that.setData({
+          collectCode: 0
+        });
+        wx.showToast({
+          title: '失败',
+          duration: 1500
+        })
+      }
+    })
     var arr = new Array(this.data.garbageCan.length);
     for (var i = 0; i < this.data.garbageCan.length; i++) {
-      arr[i] = this.data.garbageCan[i].location+'-'+this.data.garbageCan[i].number;
+      arr[i] = this.data.garbageCan[i].location + '-' + this.data.garbageCan[i].number;
     }
     this.setData({
-      cans:arr
+      cans: arr
     })
     console.log(this.data.cans);
-    // let that = this;
-    // wx.request({
-    //   url: 'http://localhost:8080/get/getCans',
-    //   success(res) {
-    //     console.log(res);
-    //     that.setData({
-    //       garbageCan:res.data
-    //     });
-    //     wx.showToast({
-    //       title: '成功',
-    //       icon: 'success',
-    //       duration: 1500
-    //     });
-    //     for(var i;i < garbageCan.length;i++){
-    //       cans[i] = garbageCan[i].location+'-'+garbageCan[i].number;
-    //     }
-    //   },
-    //   fail(res) {
-    //     console.log(res);
-    //     that.setData({
-    //       collectCode: 0
-    //     });
-    //     wx.showToast({
-    //       title: '失败',
-    //       duration: 1500
-    //     })
-    //   }
-    // })
   },
 
   /**

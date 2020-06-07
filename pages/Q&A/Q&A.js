@@ -9,11 +9,11 @@ Page({
     questions:[
       {
         topic:'topic',
-        content:'msg',
+        msg:'msg',
         ans:'ans'
       },{
         topic:'question1',
-        content:'content1',
+        msg:'content1',
         ans:'ans1'
       }
     ]

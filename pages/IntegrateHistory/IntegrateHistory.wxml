@@ -5,30 +5,30 @@
 <div class="kind-container">
   <view class="kind">
       <view class="info">分类:{{kinds[0]}}</view>
-      <view class="info">数量:{{num[0]}}</view>
+      <view class="info">数量:{{user.type1}}</view>
       <view class="info">分类权值:{{value[0]}}</view>
-      <view class="info">积分:{{num[0]* value[0]}}</view>
+      <view class="info">积分:{{user.type1* value[0]}}</view>
   </view>
   <view class="kind">
       <view class="info">分类:{{kinds[1]}}</view>
-      <view class="info">数量:{{num[1]}}</view>
+      <view class="info">数量:{{user.type2}}</view>
       <view class="info">分类权值:{{value[1]}}</view>
-      <view class="info">积分:{{num[1]* value[1]}}</view>
+      <view class="info">积分:{{user.type2* value[1]}}</view>
   </view>
   <view class="kind">
       <view class="info">分类:{{kinds[2]}}</view>
-      <view class="info">数量:{{num[2]}}</view>
+      <view class="info">数量:{{user.type3}}</view>
       <view class="info">分类权值:{{value[2]}}</view>
-      <view class="info">积分:{{num[2]* value[2]}}</view>
+      <view class="info">积分:{{user.type3* value[2]}}</view>
   </view>
   <view class="kind">
       <view class="info">分类:{{kinds[3]}}</view>
-      <view class="info">数量:{{num[3]}}</view>
+      <view class="info">数量:{{user.type4}}</view>
       <view class="info">分类权值:{{value[3]}}</view>
-      <view class="info">积分:{{num[3]* value[3]}}</view>
+      <view class="info">积分:{{user.type4 * value[3]}}</view>
   </view>
   <view class="kind">
-      <view class="info">总积分:{{totalScore}}</view>
+      <view class="info">总积分:{{user.score}}</view>
       <view class="info">上次结算日期:{{date}}</view>
   </view>
 </div>

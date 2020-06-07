@@ -16,8 +16,8 @@ Page({
       "其它垃圾"
     ],
     value:[1,2,3,4],
-    num:[1,2,3,4],
     dateLastCheck:null,
+    user:null
   },
 
   /**
@@ -38,7 +38,7 @@ Page({
       },
       success(res) {
         that.setData({
-          num: res.data
+          user: res.data
         });
         var total = 0;
         for(var i = 0 ;i < num.length;i++){

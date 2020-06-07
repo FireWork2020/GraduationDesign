@@ -9,11 +9,11 @@ Page({
     users:[
       {
         userName:'张三',
-        grade:123
+        score:123
       },
       {
         userName: '李四',
-        grade: 123
+        score: 123
       }
     ],
     date: null

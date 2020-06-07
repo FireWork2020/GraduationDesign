@@ -6,11 +6,11 @@
   <view wx:for="{{activity}}">
     <view class="item">
       <view class="left">
-        <text class="info">名称:{{item.name}}</text>
+        <text class="info">名称:{{item.topic}}</text>
         <text class="info">日期:{{item.date}}</text>
       </view>
       <view class="right">
-        <navigator class="info" url="/pages/Detail/Detail?topic={{item.name}}&msg={{item.remark}}">详细信息</navigator>
+        <navigator class="info" url="/pages/Detail/Detail?topic={{item.topic}}&msg={{item.msg}}">详细信息</navigator>
         <button class="info" bindtap="apply" data-index="{{index}}">我要报名</button>
       </view>
     </view>

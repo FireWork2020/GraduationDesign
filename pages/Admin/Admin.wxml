@@ -14,6 +14,14 @@
 <div class="button-container">
   <div class="classification">
     <div class="img">
+      <image src="../../Img/Icon/3.png"></image>
+    </div>
+    <div class="title">
+      <button bindtap="manageGarbageCan">垃圾桶管理</button>
+    </div>
+  </div>
+  <div class="classification">
+    <div class="img">
       <image src="../../Img/Icon/1.png"></image>
     </div>
     <div class="title">
@@ -50,14 +58,6 @@
     </div>
     <div class="title">
       <button bindtap="volunteerService">志愿活动</button>
-    </div>
-  </div>
-  <div class="classification">
-    <div class="img">
-      <image src="../../Img/Icon/3.png"></image>
-    </div>
-    <div class="title">
-      <button bindtap="manageGarbageCan">垃圾桶管理</button>
     </div>
   </div>
 </div>

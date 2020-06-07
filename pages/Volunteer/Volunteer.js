@@ -1,4 +1,5 @@
 // pages/Volunteer/Volunteer.js
+const app = getApp();
 Page({
 
   /**
@@ -6,28 +7,31 @@ Page({
    */
   data: {
     activity:[
-      {
-        id:1,
-        name:'捡垃圾',
-        date:'2020-04-02',
-        remark:'无'
-      }
+      
     ]
   },
 
   apply:function(options){
-    var index = options.index;
+    console.log(options);
+    console.log(this.data.activity)
+    var index = options.currentTarget.dataset.index;
+    var that = this;
+    console.log(index);
+    var activityNum = this.data.activity[index].activitynum;
+    console.log(activityNum);
     wx.request({
       url: 'http://localhost:8080/post/applyActivity',
       method:'POST',
       data:{
         userName: app.globalData.userInfo.nickName,
-        activityNum:activity[index].activityNum
+        activityNum:that.data.activity[index].activitynum
       },
       success(res) {
-        this.setData({
-          activity: res.data
-        })
+        wx.showToast({
+          title: '报名成功',
+          icon: 'success',
+          duration: 1500
+        });
       }
     })
   },

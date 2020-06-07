@@ -1,2 +1,59 @@
-<!--pages/AdminGarbageCan/AdminGarbageCan.wxml-->
-<text>pages/AdminGarbageCan/AdminGarbageCan.wxml</text>
+<view class="page">
+  <!-- 总数 -->
+  <view class="li" bindtap='changeToggle'/>
+  <view class="totalCan">垃圾箱总数:   {{cans.length}}</view>
+</view>
+<view class="addCan">
+  <picker class="pick" bindchange="selectChange"  value="{{locationIndex}}" range="{{location}}" >
+    <view>
+      选择区域:{{location[locationIndex]}}
+    </view>
+  </picker>
+  <button class="addButton" style="width:30%" bindtap="addGarbageCan">添加</button>
+</view>
+
+<view class="garbageCanDetail">垃圾桶详情</view>
+<!--分类 -->
+<view class="li" data-index="0" bindtap='changeToggle'>
+<view class="left">区域1</view>
+<view class="right">{{list1.length}} <text class="iconfont {{selectedFlag[0]?'icon-shangjiantou':'icon-xiala'}}"> </text>
+      </view>
+  </view>
+  <view hidden="{{!selectedFlag[0]}}">
+    <block wx:for="{{list1}}" wx:for-item="item" wx:for-index="index">
+      <view class="li bg-gray">
+        <text>编号:{{item.number}}   容量:{{item.state}} / 10 </text>
+        <button class="collectButton" style="width:30%" bindtap="remindCollect" data-canID="{{list1[index].id}}">提醒清运</button>
+      </view>
+    </block>
+  </view>
+
+  <view class="li" data-index="1" bindtap='changeToggle'>
+    <view class="left">区域2</view>
+    <view class="right">{{list2.length}}
+      <text class="iconfont {{selectedFlag[1]?'icon-shangjiantou':'icon-xiala'}}"> </text>
+    </view>
+  </view>
+  <view hidden="{{!selectedFlag[1]}}">
+    <block wx:for="{{list2}}" wx:for-item="item" wx:for-index="index">
+      <view class="li bg-gray">
+        <text>编号:{{item.number}}   容量:{{item.state}} / 10 </text>
+        <button bindtap="remindCollect" class="collectButton" style="width:30%" data-canID="{{list2[index].id}}">提醒清运</button>
+      </view>
+    </block>
+  </view>
+
+  <view class="li" data-index="2" bindtap='changeToggle'>
+    <view class="left">区域3</view>
+    <view class="right red">{{list3.length}}
+      <text class="iconfont {{selectedFlag[2]?'icon-shangjiantou':'icon-xiala'}}"> </text>
+    </view>
+  </view>
+  <view hidden="{{!selectedFlag[2]}}">
+    <block wx:for="{{list3}}" wx:for-item="item" wx:for-index="index">
+      <view class="li bg-gray">
+        <text>编号:{{item.number}}   容量:{{item.state}} / 10 </text>
+        <button bindtap="remindCollect" class="collectButton" style="width:30%" data-canID="{{list3[index].id}}">提醒清运</button>
+      </view>
+    </block>
+  </view>

@@ -6,7 +6,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    account:'',
+    password:''
   },
   navToAdmin:function(){
     wx.navigateTo({
@@ -39,8 +40,17 @@ Page({
     })
   },
   passwordLogin:function(){
-    wx.switchTab({
-      url: '/pages/Home/Home',
+    var account = this.data.account;
+    var password = this.data.password;
+    console.log(account);
+    console.log(password);
+    if(account == 'admin' && password == '123456'){
+      wx.switchTab({
+        url: '/pages/Admin/Admin',
+      })
+    }
+    wx.navigateTo({
+      url: '/pages/Admin/Admin',
     })
   },
   /**
