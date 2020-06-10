@@ -27,7 +27,9 @@ Page({
    */
   onLoad: function (options) {
     var time = util.formatTime(new Date());
-    this.date = time;
+    this.setData({
+      date:time
+    })
     var that = this;
     wx.request({
       url: 'http://localhost:8080/get/getNotice',

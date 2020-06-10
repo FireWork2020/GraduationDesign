@@ -28,7 +28,15 @@
   height:30rpx;
   width:100%;
 }
-
+.top-container{
+  width:100%;
+  margin:10rpx 30rpx;
+  display: block;
+  background-color: rgb(146, 243, 146);
+}
+.top-container text{
+  width:100%;
+}
 .button-container{
   width:100%;
   padding-top: 20rpx;
@@ -36,7 +44,8 @@
 .classification{
   width:100%;
   height: 130rpx;
-  padding: 10rpx 100rpx;
+  padding-top:10rpx;
+  padding-left:100rpx;
   display: flex;
   vertical-align: middle;
   align-items: center;

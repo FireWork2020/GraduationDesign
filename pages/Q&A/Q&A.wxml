@@ -10,7 +10,7 @@
       </div>
       <div class="msg">
        <text>回复: </text>
-       <text name="ans">{{item.ans}}</text>
+       <text name="ans">{{item.ans}}xz </text>
       </div>
   </div>
 </div>

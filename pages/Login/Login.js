@@ -16,6 +16,22 @@ Page({
   },
   bindGetUserInfo:function(e){
     app.globalData.userInfo = e.detail.userInfo;
+    var username = app.globalData.userInfo.nickName;
+    console.log(username);
+    wx.request({
+      url: 'http://localhost:8080/post/login',
+      method:'POST',
+      data:{
+        userName:username
+      },
+      success(res){
+        wx.showToast({
+          title: '登录成功',
+          icon: 'success',
+          duration: 1500
+        })
+      }
+    })
     wx.switchTab({
       url: '/pages/Home/Home'
     })

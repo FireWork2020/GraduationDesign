@@ -1,4 +1,4 @@
-<div class="image-container">
+<!-- <div class="image-container">
   <swiper indicator-dots="true" indicator-color="red" indicator-active-color="yellow" autoplay="true">
     <swiper-item class="swiper-item">
       <image src="../../Img/swiper/swiper1.jpeg"></image>
@@ -10,6 +10,9 @@
       <image src="../../Img/swiper/swiper3.jpg"></image>
     </swiper-item>
   </swiper>
+</div> -->
+<div class="top-container">
+  <text>登录身份：管理员</text>
 </div>
 <div class="button-container">
   <div class="classification">

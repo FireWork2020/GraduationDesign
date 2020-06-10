@@ -20,11 +20,14 @@ Page({
   },
   toZero:function(event){
     console.log(event);
-    console.log(event.currentTarget.dataset.username);
+    var index = event.currentTarget.dataset.index;
+    console.log(index)
+    var username = this.data.users[index].username;
     wx.request({
       url: 'http://localhost:8080/post/grateToZero',
+      method:'POST',
       data:{
-        userName:event.currentTarget.dataset.username
+        userName:username
       },
       success(res){
         console.log('结算完成')

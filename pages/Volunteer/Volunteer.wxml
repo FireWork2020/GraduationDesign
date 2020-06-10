@@ -1,6 +1,6 @@
 <div>
 <div class="sum">
-  <text>年月：{{date}}</text>
+  <text></text>
 </div>
 <div class="item-container">
   <view wx:for="{{activity}}">

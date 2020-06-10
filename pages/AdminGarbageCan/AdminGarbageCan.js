@@ -21,6 +21,32 @@ Page({
     locationIndex:1,
     selectedFlag:[false,false,false]
   },
+  addGarbageCan:function(options){
+    var that = this;
+    console.log(that.data.locationIndex);
+    var location = this.data.locationIndex;
+    wx.request({
+      url: 'http://localhost:8080/post/addGarbageCan',
+      method:'POST',
+      data:{
+        location:location
+      },
+      success(res){
+        wx.showToast({
+          title: '添加成功',
+          icon: 'success',
+          duration: 1500
+        })
+      },
+      fail(res){
+        wx.showToast({
+          title: '添加失败',
+          icon: 'fail',
+          duration: 1500
+        })
+      }
+    })
+  },
 
   /**
    * 生命周期函数--监听页面加载

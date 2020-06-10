@@ -13,32 +13,25 @@ Page({
       "其它垃圾"
     ],
     cans:[],
-    garbageCan:[
-      {
-        id:1,
-        location:1,
-        number:1,
-        state:1
-      },
-      {
-        id: 2,
-        location: 2,
-        number: 1,
-        state: 1
-      },
-      {
-        id: 3,
-        location: 3,
-        number: 1,
-        state: 1
-      }
-    ],
+    garbageCan:[],
     index: 0,
     collectCode:0,
     imgPath:'',
     userInfo:null,
     kindIndex:0,
     canIndex:0
+  },
+  selectChange1:function(e){
+    console.log(e.detail.value);
+    this.setData({
+      kindIndex:e.detail.value
+    })
+  },
+  selectChange2: function (e) {
+    console.log(e.detail.value);
+    this.setData({
+      canIndex: e.detail.value
+    })
   },
   getCode:function(e){
     var that = this;
@@ -93,16 +86,21 @@ Page({
     let that = this;
     wx.request({
       url: 'http://localhost:8080/get/getCans',
+      method:'GET',
       success(res) {
-        console.log(res);
+        console.log('返回值'+res);
         that.setData({
           garbageCan:res.data
         });
-        wx.showToast({
-          title: '成功',
-          icon: 'success',
-          duration: 1500
-        });
+        var arr = new Array(that.data.garbageCan.length);
+        console.log('garbagecan:' + that.data.garbageCan);
+        for (var i = 0; i < that.data.garbageCan.length; i++) {
+          arr[i] = that.data.garbageCan[i].location + '-' + that.data.garbageCan[i].number;
+        }
+        that.setData({
+          cans: arr
+        })
+        console.log(that.data.cans);
       },
       fail(res) {
         console.log(res);
@@ -115,14 +113,7 @@ Page({
         })
       }
     })
-    var arr = new Array(this.data.garbageCan.length);
-    for (var i = 0; i < this.data.garbageCan.length; i++) {
-      arr[i] = this.data.garbageCan[i].location + '-' + this.data.garbageCan[i].number;
-    }
-    this.setData({
-      cans: arr
-    })
-    console.log(this.data.cans);
+
   },
 
   /**
